@@ -33,12 +33,9 @@ public class DaoGeneric <E> {
 		try (Session session = HibernateConfig.getSessionFactory().openSession()) {
 			
 			Object id = HibernateConfig.getPrimaryKey(entidade);
-			
 			EntityTransaction transaction = session.getTransaction();
 			transaction.begin();
-			session.createNativeQuery(
-			"delete from " + entidade.getClass().getSimpleName().toLowerCase() 
-			+ " where idcliente = " + id).executeUpdate(); // delete
+			session.remove(entidade); // delete
 			transaction.commit();
 		}	
 	}

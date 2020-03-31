@@ -1,7 +1,5 @@
 package com.livraria;
 
-import java.util.List;
-
 import com.livraria.dao.DaoGeneric;
 import com.livraria.model.Cliente;
 
@@ -28,7 +26,7 @@ public class App {
 		
 		// ======== deletar por id ==============
 //		Cliente cliente = new Cliente();
-//		cliente.setIdcliente(2L);
+//		cliente.setIdcliente(3L);
 //		cliente = daoGeneric.buscarId(cliente);
 //		daoGeneric.deletar(cliente);
 		
